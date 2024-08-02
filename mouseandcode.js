@@ -437,7 +437,6 @@ require('events').EventEmitter.defaultMaxListeners = 20; // Set the maximum numb
 
 
 
-
         console.log("SSSSSSSSSS")
         //SELECT SKETCH TO CLICK OR UNCLICK, THIS CODE IS REALLY IMPORTANT
         console.log('Waiting 10 seconds.');
