@@ -45,7 +45,6 @@ require('events').EventEmitter.defaultMaxListeners = 20; // Set the maximum numb
         // Call the selectOkButton
         await selectOkButton(newPage);
 
-
         console.log("AAAAAAAAAA");
         await waitForEnter();
         console.log("BBBBBBBBBB");
