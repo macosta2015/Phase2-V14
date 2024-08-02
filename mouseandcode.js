@@ -40,33 +40,10 @@ require('events').EventEmitter.defaultMaxListeners = 20; // Set the maximum numb
 
 
         ////////////////////////////////////////////////////////////////////////////
-        //TEST CODE
         //SELECT SKETCH TO CLICK OR UNCLICK, THIS CODE IS REALLY IMPORTANT
+        //SELECT THE CANCEL BUTTON
         console.log('Waiting 10 seconds.');
-        console.log('SELECTING ITEM 5 ON THE LIST.');
-        await new Promise(resolve => setTimeout(resolve, 10000)); // Wait for 10 seconds
-        await newPage.evaluate(() => {
-            const thirdButton = document.querySelectorAll('.os-list-item-name')[5];
-            thirdButton.click();
-            if (thirdButton) {
-                thirdButton.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'center' });
-            } else {
-                console.error('Third button not found.');
-            }
-        });
-        console.log("TTTTTTTTTTTTTT")
-
-
-
-        console.log("AAAAAAAAAA");
-        await waitForEnter();
-        console.log("BBBBBBBBBB");
-
-
-        // TEST CODE
-        // SELECT SKETCH TO CLICK OR UNCLICK, THIS CODE IS REALLY IMPORTANT
-        console.log('Waiting 10 seconds.');
-        console.log('SELECTING ITEM 5 ON THE LIST.');
+        console.log('SELECTING THE CANCEL ITEM ON THE LIST.');
         await new Promise(resolve => setTimeout(resolve, 10000)); // Wait for 10 seconds
         await newPage.evaluate(() => {
             const cancelButtonDiv = document.querySelector('div.ns-dialog-button-cancel.backbone-cancel');
@@ -347,7 +324,7 @@ require('events').EventEmitter.defaultMaxListeners = 20; // Set the maximum numb
         editIntoSketchFunction(editOptions13, newPage);
 
 
-        // Select sketch to click or unclick again
+        // Good code to select items
         console.log('Select sketch to click or unclick again');
         await new Promise(resolve => setTimeout(resolve, 10000)); // Wait for 10 seconds
         await newPage.evaluate(() => {
