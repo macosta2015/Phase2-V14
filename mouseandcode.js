@@ -14,6 +14,10 @@ const renameIntoSketchFunction = require('./components/renameIntoSketchFunction.
 const searchAndClickTransform = require('./components/searchAndClickTransform.js');
 const searchAndClickCustomExtrude2 = require('./components/searchAndClickCustomExtrude2.js');
 const searchAndClickExtrude = require('./components/searchAndClickExtrude.js');
+const selectCancelButton = require('./components/selectCancelButton.js');
+const selectOkButton = require('./components/selectOkButton.js');
+
+
 const { performRightClickOptionByTitle } = require('./components/performRightClickOptionByTitle.js');
 
 const waitForEnter = require('./components/waitForEnter.js');
@@ -34,44 +38,19 @@ require('events').EventEmitter.defaultMaxListeners = 20; // Set the maximum numb
 
 
 
+        //////////////////////////////////////////////////////////////////////////
+        // Call the selectCancelButton
+        await selectCancelButton(newPage);
 
+        // Call the selectOkButton
+        await selectOkButton(newPage);
 
-
-
-
-        ////////////////////////////////////////////////////////////////////////////
-        //SELECT SKETCH TO CLICK OR UNCLICK, THIS CODE IS REALLY IMPORTANT
-        //SELECT THE CANCEL BUTTON
-        console.log('Waiting 10 seconds.');
-        console.log('SELECTING THE CANCEL ITEM ON THE LIST.');
-        await new Promise(resolve => setTimeout(resolve, 10000)); // Wait for 10 seconds
-        await newPage.evaluate(() => {
-            const cancelButtonDiv = document.querySelector('div.ns-dialog-button-cancel.backbone-cancel');
-            if (cancelButtonDiv) {
-                cancelButtonDiv.click();
-                cancelButtonDiv.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'center' });
-            } else {
-                console.error('Cancel button not found.');
-            }
-        });
-        console.log("TTTTTTTTTTTTTT");
 
         console.log("AAAAAAAAAA");
         await waitForEnter();
         console.log("BBBBBBBBBB");
-        //TEST CODE
-        ////////////////////////////////////////////////////////////////////////////
-
-
-
-
-
-
-
-
-
-
-
+        // TEST CODE
+        //////////////////////////////////////////////////////////////////////////
 
 
 
