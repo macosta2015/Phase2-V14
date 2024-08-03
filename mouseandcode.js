@@ -31,13 +31,6 @@ require('events').EventEmitter.defaultMaxListeners = 20; // Set the maximum numb
         const newPage = await launchBrowserAndNavigateToDocument(); // Ensure this returns a newPage object
 
 
-        console.log("AAAAAAAAAA");
-        await waitForEnter();
-        console.log("BBBBBBBBBB");
-
-
-
-
         //////////////////////////////////////////////////////////////////////////
         // Call the selectCancelButton
         await selectCancelButton(newPage);
@@ -50,8 +43,6 @@ require('events').EventEmitter.defaultMaxListeners = 20; // Set the maximum numb
         console.log("BBBBBBBBBB");
         // TEST CODE
         //////////////////////////////////////////////////////////////////////////
-
-
 
 
         //Working on (2) Extrude 1(4.00)
