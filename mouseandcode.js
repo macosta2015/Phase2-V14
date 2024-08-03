@@ -150,7 +150,6 @@ require('events').EventEmitter.defaultMaxListeners = 20; // Set the maximum numb
         console.log("Before searchAndClickTransform");
         await waitForEnter();
         console.log("Before editIntoSketchFunction");
-        //editIntoSketchFunction(editOptions8, newPage);
         const title21 = '(3) Extrude Sketch(1.03)'; // Replace with the desired title
         const editOptions21 = await performRightClickOptionByTitle(newPage, selector7, title21);
         editIntoSketchFunction(editOptions21, newPage);
